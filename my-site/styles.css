@@ -22,16 +22,18 @@ a:hover {
 }
 
 /* Section Styles */
+
+/*Keeps the cards from getting to intimate*/
+.card-columns {
+  margin-top: 80px;
+}
+
 .content {
   margin: 20px 20px 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-/*.container {
-  display: flex;
-  flex-wrap: wrap;
-}*/
 .main-nav {
   width: 100%;
   background: black;
@@ -40,6 +42,7 @@ a:hover {
   position: fixed;
   text-align: center;
   z-index: 3;
+  top: 0;
 }
 .nav {
   display: flex;
@@ -59,12 +62,13 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
+  text-decoration: none;
   color: white;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/banner.jpeg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -93,7 +97,7 @@ header .profile-image {
 }
 .card {
   margin-bottom: 20px;
-  padding: 20px 40px 40px 40px;
+  padding: 40px;
   max-height: inherit;
 }
 .card:hover {
@@ -135,8 +139,10 @@ ul.learning {
   background: #bdafe6;
 }
 
+/*Last child RAINBOW ANIMATION!!!*/
 .learning li:last-child {
-  animation: colorchange 2s; /* animation-name followed by duration in seconds*/
+  animation: colorchange 2s;
+  /* animation-name followed by duration in seconds*/
 
   -webkit-animation: colorchange 3s infinite; /* Chrome and Safari */
 }
@@ -150,7 +156,7 @@ ul.learning {
   100% {background: red;}
 }
 
-@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+@-webkit-keyframes colorchange /* Safari and Chrome */
 {
   0%   {background: red;}
   25%  {background: yellow;}
@@ -158,6 +164,12 @@ ul.learning {
   75%  {background: green;}
   100% {background: red;}
 }
+
+.project_cards {
+  padding: 0;
+}
+
+
 footer {
   width: 100%;
   min-height: 30px;
